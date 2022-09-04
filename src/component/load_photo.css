@@ -1,0 +1,23 @@
+.load-photo{
+    position: relative;
+
+    justify-content: center; 
+    max-width: 350px !important;
+}
+
+.load{
+    
+    /* margin: 1em;  */
+
+    /* height: 15vh;
+    width: 100vw;
+    /* background-color: #6D6D6D; */
+    /* width: 400px; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* min-width: 30vw; */
+    /* min-height: 30vh; */
+    justify-content: space-between !important;
+  
+  }

@@ -1,0 +1,21 @@
+
+.header{
+  height: 15vh;
+  width: 100vw;
+  background-color: #6D6D6D;
+  /* width: 200px; */
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  
+
+}
+
+.logo{
+  position: absolute;
+  justify-content: center;
+  max-width: 140px !important;
+}

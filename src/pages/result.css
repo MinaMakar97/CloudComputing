@@ -1,0 +1,47 @@
+
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    /* min-width: 100vw; */
+    font-size: xx-large !important;
+}
+
+.description{
+    /* width: 100vw; */
+    height: 20vh;
+}
+
+.elem > p {
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    margin-left: 1em !important;
+    font-family: "EB Garamond";
+    font-size: large;
+}
+
+.elem{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+}
+
+.content_element{width: 100%;}
+
+.result{
+    width: 30vw !important;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.img-result{
+    width: 35vw !important;
+}
+
+.info{
+    width: 70vw !important;
+}
