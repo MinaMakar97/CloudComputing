@@ -1,7 +1,6 @@
 import React from "react";
 
 import Header from "../component/header";
-import LoadPhoto from "../component/load_photo";
 import colosseo from "../image/Colosseum_1.jpg";
 
 import "./result.css";
@@ -73,7 +72,7 @@ class Result extends React.Component {
 						</p>
 					</div>
 					<div className="col-4 result">
-						<img className="img-result" src={colosseo} />
+						<img className="img-result" src={colosseo} alt="description" />
 					</div>
 				</div>
 			</div>
