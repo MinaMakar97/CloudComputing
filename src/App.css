@@ -53,9 +53,10 @@ body {
   
   background: var(--colore-primario);
   /* background: linear-gradient(180deg, var(--colore-primario) 20%, var(--colore-secondario) 100%); */
-  max-width: 1580px;
-  min-height: 100vh;
+  /* max-width: 1580px; 
+  min-height: 100vh; */
   width: 100%;
+  height: 100%;
   /* border-radius: 24px; */
   /* position: relative; */
   /* padding: 3.5vmax; */
@@ -64,7 +65,10 @@ body {
 
 }
 
-
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 
 .App-header {
@@ -79,18 +83,21 @@ body {
   position: top;
 }
 
-
+.row {
+  margin-right: 0px;
+  margin-top: 0px;
+}
 .superiore{
-  min-width: 100vw;
-  min-height: 15vh;
+  min-width: 100%;
+  min-height: 14vh;
   height: 15%;
 }
 
 .inferiore{
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 85vh;
   height: 85%;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 .App-link {
   color: #61dafb;

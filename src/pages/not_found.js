@@ -15,7 +15,7 @@ class Home extends React.Component {
 				<div className="row inferiore">
 					<div className="col-8 ">
 						<div className="row-mb-3 immagine">
-							<img className="notFound" src={no_result} />
+							<img className="notFound" src={no_result} alt="not found" />
 						</div>
 						<div className="row-mb-3 testo">
 							<p className="font-text">No result found </p>
