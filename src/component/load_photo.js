@@ -83,6 +83,7 @@ class LoadPhoto extends React.Component {
 		this.toBase64(file, inviaFile);
 		this.props.changeToLoading();
 	}
+
 	render() {
 		//const { match, location, history } = this.props;
 		return (

@@ -28,7 +28,9 @@ class Home extends React.Component {
 		this.setState({ redirect: true, jsonPage: JSON.parse(json["result"]) }, () => {
 			console.log(this.state.redirect);
 		});
-	}	render() {
+	}
+
+	render() {
 		return !this.state.redirect || Object.keys(this.state.jsonPage).length === 0 ? (
 			<div>
 				<div className="superiore">
@@ -38,20 +40,22 @@ class Home extends React.Component {
 					<div className="col-8 ">
 						<img className="colosseo" src={colosseo} alt="Home page" />
 					</div>
-{!this.state.isEdit ? (
+					{!this.state.isEdit ? (
 						<div className="col-4 container" id="to_replace">
 							<div className="row-mb-3 immagine">
 								<LoadPhoto changeToLoading={this.changeToLoading} changePage={this.changePage}></LoadPhoto>
 							</div>
+
 							<div className="row-mb-3 testo">
 								<p className="font-text">upload a photo of an Italian monument and discover the name and its history</p>
 							</div>
 						</div>
-) : (
+					) : (
 						<div className="col-4 allinea d-flex flex-column">
 							<Loader></Loader>
 						</div>
-					)}				</div>
+					)}
+				</div>
 			</div>
 		) : (
 			//window.open("/result")
