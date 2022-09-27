@@ -33,11 +33,11 @@ class Home extends React.Component {
 	render() {
 		return !this.state.redirect || Object.keys(this.state.jsonPage).length === 0 ? (
 			<div>
-				<div className="superiore">
+				<div className="row superiore">
 					<Header></Header>
 				</div>
-				<div className="row inferiore">
-					<div className="col-8 ">
+				<div className="row inferiore ">
+					<div className="col-8">
 						<img className="colosseo" src={colosseo} alt="Home page" />
 					</div>
 					{!this.state.isEdit ? (
@@ -46,7 +46,7 @@ class Home extends React.Component {
 								<LoadPhoto changeToLoading={this.changeToLoading} changePage={this.changePage}></LoadPhoto>
 							</div>
 
-							<div className="row-mb-3 testo">
+							<div className="row-mb-3 testo mobile">
 								<p className="font-text">upload a photo of an Italian monument and discover the name and its history</p>
 							</div>
 						</div>

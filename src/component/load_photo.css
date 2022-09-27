@@ -1,8 +1,11 @@
 .load-photo{
     position: relative;
-
+    display: flex;
     justify-content: center; 
     max-width: 350px !important;
+    min-width: 400px;
+    justify-content: center;
+    align-items: center;
 }
 
 .load{
@@ -18,6 +21,12 @@
     display: flex;
     /* min-width: 30vw; */
     /* min-height: 30vh; */
-    justify-content: space-between !important;
   
+  }
+
+  @media( max-width: 576px){
+    .load-photo{
+        max-width: 250px !important;
+        min-width: 200px !important;
+    }
   }

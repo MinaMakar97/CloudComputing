@@ -88,7 +88,7 @@ class LoadPhoto extends React.Component {
 		//const { match, location, history } = this.props;
 		return (
 			<div className="load" onDragOver={this.dragOver} onDragEnter={this.dragEnter} onDragLeave={this.dragLeave} onDrop={this.fileDrop}>
-				<label className="carica-immagine">
+				<label className="load-photo">
 					<input type="file" accept="image/*" hidden onChange={this.gestisciImmagine}></input>
 					<img src={Load_foto} className="load-photo" alt="Logo di Discover Culture"></img>
 				</label>
