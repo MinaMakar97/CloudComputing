@@ -11,7 +11,11 @@
 
 .description{
     /* width: 100vw; */
-    height: 20vh;
+    /* height: 20vh; */
+}
+
+.roots{
+    padding-right: 0px !important;
 }
 
 .elem > p {
@@ -29,7 +33,11 @@
     padding-right: 0% !important;
 }
 
-.content_element{width: 100%;}
+.content_element{width: 100%; margin-left: 20px;}
+
+.content_description{
+    padding: 23px;
+}
 
 .result{
     width: 30vw !important;

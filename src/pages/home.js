@@ -32,7 +32,7 @@ class Home extends React.Component {
 
 	render() {
 		return !this.state.redirect || Object.keys(this.state.jsonPage).length === 0 ? (
-			<div>
+			<div className="col">
 				<div className="row superiore">
 					<Header></Header>
 				</div>
