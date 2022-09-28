@@ -47,26 +47,36 @@ class LoadPhoto extends React.Component {
 	toBase64 = (file) => {
 		const reader = new FileReader();
 		reader.onload = (callback) => {
-			// callback(reader.result);
 			this.inviaFile(reader.result.replace("data:image/jpeg;base64,", ""));
 		};
 		reader.readAsDataURL(file);
 	};
 
 	inviaFile(file) {
-		const dati = { body: file };
-		const req = new XMLHttpRequest();
-		req.onreadystatechange = (e) => {
-			if (e.target.readyState === 4 && e.target.status === 200) {
-				// eslint-disable-next-line no-undef
-				$("#popup-successo").modal();
-			}
-		};
-		req.open("POST", "http://localhost:9000/2015-03-31/functions/function/invocations");
-		req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-		// req.withCredentials = false;
-		// console.log(JSON.stringify(dati));
-		req.send(JSON.stringify(dati));
+		const dati = { imageData: file };
+		console.log(dati);
+		// 	const req = new XMLHttpRequest();
+		// 	req.onreadystatechange = (e) => {
+		// 		if (e.target.readyState === 4 && e.target.status === 200) {
+		// 			console.log(e);
+		// 			// eslint-disable-next-line no-undef
+		// 			//$("#popup-successo").modal();
+		// 			this.props.changePage();
+		// 		}
+		// 	};
+		// 	req.open("POST", "https://l7x5kh3emvpkztj5kqzqozzsum0zbydh.lambda-url.us-east-1.on.aws/");
+		// 	req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		// 	// req.withCredentials = false;
+		// 	// console.log(JSON.stringify(dati));
+		// 	req.send(JSON.stringify(dati));
+		//
+		fetch("https://l7x5kh3emvpkztj5kqzqozzsum0zbydh.lambda-url.us-east-1.on.aws/", {
+			method: "post",
+			header: { "Content-Type": "application/json;charset=UTF-8" },
+			body: JSON.stringify(dati),
+		}).then((response) => {
+			response.json().then((json) => this.props.changePage(json));
+		});
 	}
 
 	async convertImage(file, inviaFile) {
@@ -75,9 +85,10 @@ class LoadPhoto extends React.Component {
 	}
 
 	render() {
+		//const { match, location, history } = this.props;
 		return (
 			<div className="load" onDragOver={this.dragOver} onDragEnter={this.dragEnter} onDragLeave={this.dragLeave} onDrop={this.fileDrop}>
-				<label className="carica-immagine">
+				<label className="load-photo">
 					<input type="file" accept="image/*" hidden onChange={this.gestisciImmagine}></input>
 					<img src={Load_foto} className="load-photo" alt="Logo di Discover Culture"></img>
 				</label>

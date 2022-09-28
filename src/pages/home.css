@@ -1,16 +1,18 @@
 .immagine{
     width: 100%;
+    height: 100%;
+    max-height: 500px;
     height: 50vh;
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .testo{
     height: 30vh;
     width: 100%;
-    
+    font-size: 55px;
 }
 
 .padre{
@@ -20,10 +22,70 @@
 
 .font-text{
     font-family: "Annie Use Your Telescope";
-    font-size: 35px;
+    font-size: 55px !important;
     text-align: center;
 }
 
 .colosseo{
     width: 95%;
 }
+
+.container{
+    margin-left: auto;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 100% !important;
+}
+
+@media( max-width: 576px){
+    .font-text{    font-size: 35px !important;}
+    .immagine{
+        display: contents !important;
+    }
+    .colosseo{
+        width: 100%;
+        max-width: 600px;
+        max-height: 600px;
+    }
+    .superiore{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .inferiore{
+        min-width: 100%;
+    min-height: 85vh;
+    height: 85%;
+    /* padding-top: 1em; */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+      }
+      .mobile{
+        padding-right: 0px; 
+        padding-left: 0px;
+        margin:0;
+        align-content: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        display: flex !important;
+      }
+      .col-4{max-width: none;}
+      .logo{
+        max-width: 140px !important;
+      }
+      .container{
+        margin: 0% !important;
+      }
+      .col-8, .col-4{
+        padding: 0px !important;
+      }
+      .load{
+        margin-top: 50px;
+      }
+    }
