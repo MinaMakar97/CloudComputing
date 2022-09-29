@@ -23,9 +23,10 @@
     margin-block-end: 0em !important;
     margin-inline-start: 0px !important;
     margin-inline-end: 0px !important;
-    margin-left: 1em !important;
+    /* margin-left: 1em !important; */
     font-family: "EB Garamond";
     font-size: large;
+    padding-left: 23px;
 }
 
 .elem{
@@ -33,23 +34,46 @@
     padding-right: 0% !important;
 }
 
-.content_element{width: 100%; margin-left: 20px;}
+.content_element{
+    width: 100%; 
+    /* margin-left: 20px;  */
+    flex-direction: column;
+}
 
 .content_description{
     padding: 23px;
 }
 
 .result{
-    width: 30vw !important;
-    align-content: flex-end;
-    align-items: flex-end;
-    justify-content: right;
+    width: 30vw;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
 }
 
 .img-result{
-    width: 35vw !important;
+    max-width: 30vw !important;
+    max-height: 50vh !important;
 }
 
 .info{
-    width: 70vw !important;
+    /* width: 70vw !important; */
+}
+
+
+
+
+@media( max-width: 576px){
+    .result{
+        width: 100% !important; 
+        align-content: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .img-result{
+        width: 85vw !important;
+    }
+
 }
